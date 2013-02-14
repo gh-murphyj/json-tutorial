@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script type="text/javascript">
+	/*-- Constructing JSON objects --*/
+
+	var obj1 = {user:"John", age:22, country:"United States"}; // object
+	var obj2 = {user:"Will", age:27, country:"Ireland"}; // object
+	var obj3 = {user:"Abiel", age:19, country:"Mexico"}; // object
+	var obj4 = {u1:obj1, u2:obj2, u3:obj3}; // nested objects
+	
+	/*-- Referencing JSON objects --*/
+	
+	/* reference the objects */
+	document.write(obj3.user+" is "+obj3.age+" yrs old and is from "+obj3.country);
+	document.write('<hr/>');
+	/* change an object */
+	obj3.country = "Italy";
+	document.write(obj3.user+" is "+obj3.age+" yrs old and is from "+obj3.country);
+	document.write('<hr/>');
+	/* reference nested objects */
+	document.write(obj4.u3.user+" is "+obj4.u3.age+" yrs old and is from "+obj4.u3.country);
+	document.write('<hr/>');
+	/* reference nested objects - alternate way */
+	document.write(obj4["u2"]["user"]+" is "+obj4["u2"]["age"]+" yrs old and is from "+obj4["u2"]["country"]);
+	document.write('<hr/>');
+	
+	/*-- Referencing arrays within JSON objects --*/
+	var meats = ["beef","pork","lamb"]; // array
+	var fruits = ["apple","plumb","grape","orange"]; // array
+	var obj5 = {arr1:meats, arr2:fruits}; // JSON object 
+	document.write(obj5.arr1[1]+" with "+obj5.arr2[0]+" for dinner");
+</script>
+</head>
+<body>
+</body>
+</html>
